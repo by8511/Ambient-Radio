@@ -3,7 +3,7 @@ import { pathToFileURL } from 'node:url';
 
 const { chromium } = await import('playwright');
 
-const fileUrl = pathToFileURL(new URL('./badcreative-radio-h5-prototype-v0-4.html', import.meta.url).pathname).href;
+const fileUrl = pathToFileURL(new URL('./index.html', import.meta.url).pathname).href;
 const browser = await chromium.launch({ headless: true });
 
 async function checkViewport(width, height) {
